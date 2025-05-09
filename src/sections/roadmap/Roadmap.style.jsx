@@ -149,6 +149,7 @@ const RoadmapWrapper = styled.section`
     backdrop-filter: blur(10px);
     transition: all 0.3s ease-in-out;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+    color: #FFFFFF; /* Setting text color to white */
 
     &:hover {
       transform: translateY(-5px);

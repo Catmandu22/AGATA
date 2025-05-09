@@ -516,17 +516,17 @@ const Tokenomics = () => {
       const animateDetachment = () => {
         // Start animation with very smooth effects
         const startTime = performance.now();
-        const duration = 400; // Shorter duration for more immediate response
+        const duration = 600; // Slightly longer duration for smoother transitions
         
         const animate = (timestamp) => {
           const elapsed = timestamp - startTime;
           const progress = Math.min(elapsed / duration, 1);
           
-          // Use a simple ease-out function for quick start, gradual end
-          const easeOutQuad = (x) => 1 - (1 - x) * (1 - x);
+          // Use an ease-in-out function for smoother transitions
+          const easeInOutCubic = (x) => x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2;
           
           // Apply easing to make the animation smoother
-          const easedProgress = easeOutQuad(progress);
+          const easedProgress = easeInOutCubic(progress);
           
           // Store the animation progress for use in drawPieChart
           setAnimationProgress(easedProgress);

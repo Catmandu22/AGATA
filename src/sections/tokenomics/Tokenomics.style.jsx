@@ -28,10 +28,13 @@ const popOut = keyframes`
   0% {
     transform: scale(1);
   }
-  40% {
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
     transform: scale(1.08);
   }
-  70% {
+  75% {
     transform: scale(1.05);
   }
   100% {
@@ -146,16 +149,16 @@ const TokenomicsWrapper = styled.section`
         max-height: 100%;
         position: relative;
         z-index: 1;
-        transition: transform 0.3s ease;
+        transition: transform 0.5s cubic-bezier(0.45, 0, 0.55, 1); /* ease-in-out cubic bezier */
         
         &:hover {
           transform: scale(1.02) translateY(-3px);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-          transition: all 0.3s ease;
+          transition: all 0.5s cubic-bezier(0.45, 0, 0.55, 1); /* ease-in-out cubic bezier */
         }
         
         &.animating {
-          animation: ${popOut} 0.7s ease-out;
+          animation: ${popOut} 0.8s cubic-bezier(0.45, 0, 0.55, 1); /* ease-in-out cubic bezier */
           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
       }

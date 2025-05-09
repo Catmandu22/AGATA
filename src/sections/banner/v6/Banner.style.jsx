@@ -46,7 +46,7 @@ const BannerWrapper = styled.section`
 
   .presale-card {
     margin: 0 auto 140px; /* Restored original bottom margin */
-    width: 625px;
+    width: 650px;
     max-width: 100%;
     position: relative;
 
@@ -54,7 +54,7 @@ const BannerWrapper = styled.section`
     border-radius: 20px;
     border: 2px solid rgba(29, 255, 224, 0.2); /* Teal border */
     background: rgba(7, 35, 50, 0.9); /* Darker blue background */
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(9px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 
     &-header {

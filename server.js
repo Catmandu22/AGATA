@@ -19,5 +19,5 @@ app.get('*', (req, res) => {
 const PORT = 12000;
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running at http://0.0.0.0:${PORT}`);
-  console.log(`Access via: https://work-1-cnlzoeftbdmnmmak.prod-runtime.all-hands.dev`);
+  console.log(`Access via: https://work-1-lwrkaslmoikhwdjy.prod-runtime.all-hands.dev`);
 });

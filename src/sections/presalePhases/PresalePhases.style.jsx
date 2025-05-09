@@ -59,7 +59,7 @@ const PresalePhasesWrapper = styled.section`
     margin: 0 0 40px 0;
     z-index: 1;
     width: 100%;
-    overflow: hidden;
+    overflow: visible; /* Changed from hidden to visible to show the hat */
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
@@ -73,6 +73,29 @@ const PresalePhasesWrapper = styled.section`
     transition: width 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     box-shadow: 0 0 20px rgba(243, 186, 47, 0.8), 0 0 5px rgba(243, 186, 47, 1);
     animation: pulse 2s infinite;
+  }
+  
+  .maga-cap {
+    position: absolute;
+    top: -30px; /* Position above the progress bar */
+    transition: left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 10;
+    animation: float 2s ease-in-out infinite;
+    
+    img {
+      width: 40px;
+      height: auto;
+      filter: drop-shadow(0 0 5px rgba(243, 186, 47, 0.7));
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0) translateX(-50%);
+    }
+    50% {
+      transform: translateY(-5px) translateX(-50%);
+    }
   }
   
   @keyframes pulse {
@@ -428,6 +451,14 @@ const PresalePhasesWrapper = styled.section`
       border-radius: 7px;
     }
     
+    .maga-cap {
+      top: -25px;
+      
+      img {
+        width: 35px;
+      }
+    }
+    
     .phase-item .phase-box::after {
       width: 10px;
       height: 10px;
@@ -504,6 +535,14 @@ const PresalePhasesWrapper = styled.section`
     
     .progress-bar {
       border-radius: 6px;
+    }
+    
+    .maga-cap {
+      top: -22px;
+      
+      img {
+        width: 30px;
+      }
     }
     
     .phase-box {
